@@ -8,13 +8,13 @@
 </head>
 <body>
 <h1>Please login to your the server.</h1>
-		<form method="post" action="Verification">
+		<form method="post" action="nodes">
 
 			Please enter your username 		
-			<input type="text" name="un_input"/><br>		
+			<input type="text" name="username_input"/><br>		
 		
 			Please enter your password
-			<input type="password" name="pw_input"/>
+			<input type="password" name="password_input"/>
 			
 			<input type="submit" value="submit">			
 		</form>
