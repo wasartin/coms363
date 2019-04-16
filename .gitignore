@@ -1,0 +1,37 @@
+/.metadata/
+/target/
+*/target/*
+!.mvn/wrapper/maven-wrapper.jar
+#ignore
+*.log
+*.gz
+
+### STS ###
+.metadata
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.bin
+bin
+.recommenders
+.metadata
+*.apk
+*.ap_
+*.gz
+.log
+business/application.log*
+.metadata/
+.recommenders/
+.Servers
+
+### MISC ##
+tips.txt
+Assignment4.pdf
+HW4_createnodes.sql
+soFar.sql
+Servers/
+JDBC-JSP
