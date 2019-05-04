@@ -9,10 +9,6 @@
 <meta name="author" content="Will Sartin">
 </head>
 <body>
-	<!--See https://www.w3schools.com/html/html_forms.asp 
-		"Always use POST if the form data contains sensitive or personal information. 
-	     The POST method does not display the submitted form data in the page address field."
-	 -->
 	 <center>
 	 <h1>Initial Login Screen</h1>
 	 <div class="inital-login-box">

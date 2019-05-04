@@ -3,6 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+	<!-- 
+	-This is the QuerySelector page. For this first portion we have some general methods, and how we keep the info whether the user is an admin or not.
+	-From there we set up our connection if the user is logging in. 
+	-Finally we list out all the queries available depending on the user.
+	 -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,12 +18,7 @@
 <body>
 	<%@ page errorPage="ShowError.jsp"%>
 	<%@ include file="DBInfo.jsp"%>
-	<!-- 
-	-This is the QuerySelector page. For this first portion we have some general methods, and how we keep the info whether the user is an admin or not.
-	-From there we set up our connection if the user is logging in. 
-	-Finally we list out all the queries available depending on the user.
-	 -->
-	<%!
+	<%!										
 		public Connection conn = null;
 		public PreparedStatement pStmt = null;
 		public ResultSet rs = null;
@@ -43,7 +43,6 @@
 			}
 			return partyList;
 		}
-
 	%>
 	<%
 		String VERIFY_USER_QUERY = "SELECT * FROM application_users a"
@@ -135,7 +134,7 @@
 			<input type = "text" name = "limit" placeholder="Enter Number"><br>
 			
 			<label for="hashtag">Hashtag</label>
-			<input type = "text" name = "hashtag" placeholder="NewYear"><br> <!-- Figure out what to do here-->
+			<input type = "text" name = "hashtag" placeholder="NewYear"><br>
 			
 			<label for="month">Month</label>
 			<select name="month">
@@ -197,6 +196,7 @@
 		<p>Input: List of states, month, year</p>
 		<form method = "get" action = "ShowResult.jsp"> 
 			<input type="hidden" value="10" name="query_selected" /> 
+			<!-- I really don't like this, I am sure there is a better way to do this -->
 			<label for="states">States Hold down the Ctrl (windows) / Command (Mac) button to select multiple </label>
 			<select name="states" multiple>
 					<option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option>
@@ -277,8 +277,7 @@
 			<label for="party">Party</label>
 			<select name="party"> 
 				<%
-				for(int i = 0; i < partyList.size(); i++){
-					String currParty = partyList.get(i);
+				for(String currParty : partyList){
 					out.println("<option value="+ currParty + ">" + currParty + "</option>");
 				}
 				%>
@@ -387,7 +386,6 @@ if(isAdmin == false){
 			<input type = "submit" value = "Execute Query" />
 			</form>
 		</div>
-		
 		<div class="query-box">
 				<h3 id="qd">Query Delete</h3>
 				<p>Delete a given user and all the tweets the user has tweeted, relevant hashtags, and users mentioned</br></p>

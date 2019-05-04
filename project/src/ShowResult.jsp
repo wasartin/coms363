@@ -237,8 +237,6 @@
 				if (stmt!= null) stmt.close();
 				if (conn != null) conn.close();
 			}
-
-
 		}
 		else if(querySelected == 2){
 			try{
@@ -395,7 +393,6 @@
 				if (stmt!= null) stmt.close();
 				if (conn != null) conn.close();
 			}
-
 		}
 		else if(querySelected == 23){
 			try{
