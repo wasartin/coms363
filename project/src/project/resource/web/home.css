@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+
+/* Begining of main */
+
+	body {
+	postiion: fixed;
+	margin: 0;
+  	padding: 0;
+  	height = 100vh;
+	font-size: 1.2em;
+	background-attachment:fixed;
+	background-position:center;
+	font-family: times new roman, sans-serif;
+	}
+
+	a:link {
+	color: black;
+	}
+	
+	a:visited {
+	color: #754719;
+	}
+
+	ul a:hover {
+	color: #E6E6E6;
+	}
+
+	.inital-login-box{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	height: 400px;
+	width: 300px;
+	border: 2px solid black;
+	font-size: 0.9em;
+	padding: 15px;
+	}
+	
+	.initial-login-box label{
+	margin: 0;
+  	padding: 0;
+  	font-weight: bold;
+  	display: block;
+	}
+	
+	.initial-login-box input {
+	width: 100%;
+  	margin-bottom: 20px;
+	}
+	
+	.initial-login-box input[type="text"] .initial-login-box input[type="password"]{
+  	margin-left:20%;
+  	margin-bottom: 20px;
+	}
+	
+	.inital-login-box input[type="submit"]{
+	height: 40px;
+  	font-size: 18px;
+  	position: absolute;
+  	margin-top: 5%;
+    left: 50%;
+	}
+	
+	
+	
+/* End of main */
+
+
+/* header & logo begining */
+	header {
+	text-align: center;
+	}
+
+/* Begining of footer*/
+	footer {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 0.3%;
+	padding-bottom: 0.5%;
+	font-size: 1.2em;
+	word-spacing: 15px;
+	clear: both;
+	}
